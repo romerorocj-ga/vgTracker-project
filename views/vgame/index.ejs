@@ -1,0 +1,23 @@
+<%- include('../partials/header') %>
+
+<h2>Video Games</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Release Year</th>
+      <th>Rating</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% vgames.forEach(function(v) { %>
+    <tr>
+      <td><%= v.title %></td>
+      <td><%= v.releaseYear %></td>
+      <td><%= v.esrbRating %></td>
+    </tr>
+    <% }) %>
+  </tbody>
+</table>
+
+<%- include('../partials/header') %>

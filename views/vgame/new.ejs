@@ -1,0 +1,23 @@
+<h2>Enter a New Video Game</h2>
+<form action="/vgames" method="POST">
+  <label
+    >Title:
+    <input type="text" name="title" /> </label
+  ><br />
+  <label
+    >Release Year:
+    <input type="number" name="releaseYear" /> </label
+  ><br />
+  <label
+    >ESRB Rating
+    <select name="mpaaRating">
+      <option value="E">E</option>
+      <option value="T">T</option>
+      <option value="M">M</option>
+    </select> </label
+  ><br />
+  <button type="submit">Add Video Game</button>
+</form>
+<p><%= errorMsg %></p>
+
+<%- include('../partials/footer') %>
