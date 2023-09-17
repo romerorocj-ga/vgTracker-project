@@ -27,10 +27,11 @@ async function create(req, res, next) {
   }
 
   try {
+    const price = parseFloat(req.body.price);
     const vgame = await Vgame.create({
       title: req.body.title,
       system: req.body.system,
-      price: req.body.price,
+      price: price,
       releaseYear: req.body.releaseYear,
       esrbRating: req.body.esrbRating,
     });
