@@ -29,7 +29,9 @@ const reviewSchema = new Schema(
 const vgameSchema = new Schema(
   {
     title: { type: String, required: true },
-    releaseDate: {
+    system: String, // New field for System
+    price: Number, // New field for Price
+    releaseYear: {
       type: Number,
       default: function () {
         return new Date().getFullYear();

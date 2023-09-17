@@ -1,21 +1,24 @@
 <h2>Enter a New Video Game</h2>
 <form action="/vgames" method="POST">
-  <label
-    >Title:
-    <input type="text" name="title" /> </label
+  <label>Title:</label>
+  <input type="text" name="title" /><br />
+
+  <label>System:</label>
+  <input type="text" id="system" name="system" placeholder="Enter system" />
+
+  <label>Price:</label>
+  <input type="text" id="price" name="price" placeholder="Enter price" />
+
+  <label>Release Year:</label>
+  <input type="number" name="releaseYear" /><br />
+
+  <label>ESRB Rating:</label>
+  <select name="esrbRating">
+    <option value="E">E</option>
+    <option value="T">T</option>
+    <option value="M">M</option></select
   ><br />
-  <label
-    >Release Year:
-    <input type="number" name="releaseYear" /> </label
-  ><br />
-  <label
-    >ESRB Rating
-    <select name="mpaaRating">
-      <option value="E">E</option>
-      <option value="T">T</option>
-      <option value="M">M</option>
-    </select> </label
-  ><br />
+
   <button type="submit">Add Video Game</button>
 </form>
 <p><%= errorMsg %></p>

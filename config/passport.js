@@ -17,7 +17,7 @@ passport.use(
           name: profile.displayName,
           googleId: profile.id,
           email: profile.emails[0].value,
-          avatar: profile.photps[0].value,
+          avatar: profile.photos[0].value,
         });
         return cb(null, user);
       } catch (err) {
@@ -26,3 +26,11 @@ passport.use(
     }
   )
 );
+
+passport.serializeUser(function (user, cb) {
+  cb(null, user._id);
+});
+
+passport.deserializeUser(async function (userId, cb) {
+  cb(null, await User.findById(userId));
+});
