@@ -5,6 +5,8 @@ module.exports = {
   show,
   new: newVgame,
   create,
+  edit,
+  update,
 };
 
 async function index(req, res, next) {
@@ -40,5 +42,43 @@ async function create(req, res, next) {
   } catch (err) {
     console.log(err);
     res.render("vgames/new", { errorMsg: err.message });
+  }
+}
+
+async function edit(req, res) {
+  try {
+    const vgame = await Vgame.findById(req.params.id);
+    if (!vgame) {
+      res.redirect("/vgames");
+    } else {
+      res.render("vgames/edit", { title: "Edit Video Game", vgame });
+    }
+  } catch (err) {
+    console.log(err);
+    res.redirect("/vgames");
+  }
+}
+
+async function update(req, res) {
+  try {
+    const { title, releaseYear, esrbRating, system, price } = req.body;
+    const vgame = await Vgame.findById(req.params.id);
+
+    if (!vgame) {
+      return res.redirect("/vgames");
+    }
+
+    vgame.title = title;
+    vgame.releaseYear = releaseYear;
+    vgame.esrbRating = esrbRating;
+    vgame.system = system;
+    vgame.price = price;
+
+    await vgame.save();
+
+    res.redirect(`/vgames/${vgame._id}`);
+  } catch (err) {
+    console.log(err);
+    res.redirect("/vgames");
   }
 }
