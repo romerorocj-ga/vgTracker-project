@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
   font-family: Helvetica;
-  color: #e0e0e0;
+  color: #efeaea;
 }
 
 body {
@@ -24,9 +24,10 @@ body > nav {
 }
 
 nav > img {
-  width: 34px;
+  width: 70px;
   object-fit: contain;
   margin-right: auto;
+  border-radius: 50%;
 }
 
 body > main {
@@ -52,7 +53,7 @@ nav > a {
 
 nav > a:hover:not(.active) {
   color: white;
-  background-color: #424748;
+  background-color: #7e2d8e;
 }
 
 nav > a.active {
@@ -67,11 +68,12 @@ nav > a.active {
 }
 
 #new-form *,
-#add-review-form *,
-#add-performer-form * {
+#add-review-form * {
   font-size: 20px;
   padding: 5px;
-  border-radius: 5px;
+  border-radius: 20px;
+  color: black;
+  text-shadow: 1px 1px 0 #232323;
 }
 
 #new-form input[type="submit"] {
@@ -101,10 +103,12 @@ table td {
 
 #list a {
   border-radius: 4px;
-  background-color: #e7eaeb;
+  background-color: #7e2d8e;
+  color: white;
   padding: 4px;
   text-decoration: none;
   font-size: 14px;
+  border-radius: 20px;
 }
 
 #list a:hover {
@@ -136,7 +140,7 @@ table td {
 }
 
 hr {
-  color: #d1d4d4;
+  color: #2a2c2c;
 }
 
 #badge-container {
@@ -188,4 +192,14 @@ hr {
 .review-user img {
   border-radius: 50%;
   height: 40px;
+}
+
+#add-video-game-button {
+  background-color: #7e2d8e;
+  color: white;
+}
+
+#review-button {
+  background-color: #7e2d8e;
+  color: white;
 }

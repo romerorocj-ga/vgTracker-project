@@ -42,6 +42,10 @@ const vgameSchema = new Schema(
       type: String,
       enum: ["E", "T", "M"],
     },
+    completed: {
+      type: Boolean,
+      default: false, // Initially, games are not completed
+    },
     reviews: [reviewSchema],
   },
   {

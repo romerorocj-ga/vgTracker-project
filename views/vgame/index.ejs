@@ -6,7 +6,6 @@
     <tr>
       <th>Title</th>
       <th>Release Year</th>
-      <th>Rating</th>
     </tr>
   </thead>
   <tbody>
@@ -15,6 +14,7 @@
       <td><%= v.title %></td>
       <td><%= v.releaseYear %></td>
       <td><%= v.esrbRating %></td>
+      <a class="purple-button" href="/vgames/<%= vgame._id %>">Details</a>
     </tr>
     <% }) %>
   </tbody>
