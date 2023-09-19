@@ -7,7 +7,7 @@
 # Application Images
 
 Main Page
-![Screenshot 2023-09-18 at 9 32 03 PM](https://github.com/romerorocj-ga/vgTracker-project/assets/140639820/b81acff8-65c2-44d0-abae-0be445246b23)
+![Screenshot 2023-09-18 at 9 32 31 PM](https://github.com/romerorocj-ga/vgTracker-project/assets/140639820/4b630d03-f86b-4287-950a-7aa189401273)
 
 Edit/Update Game Page
 ![Screenshot 2023-09-18 at 9 32 21 PM](https://github.com/romerorocj-ga/vgTracker-project/assets/140639820/c5df845c-a870-4382-9f0e-eb2ee3af682b)
