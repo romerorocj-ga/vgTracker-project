@@ -1,7 +1,6 @@
 <%- include('../partials/header') %>
 
 <form id="new-form" action="/vgames/<%= vgame._id %>" method="POST">
-  <h2></h2>
   <label>Title:</label>
   <input type="text" name="title" value="<%= vgame.title %>" />
   <label>Release Year:</label>
@@ -9,14 +8,21 @@
   <label>ESRB Rating:</label>
   <select name="esrbRating">
     <option value="E" <%= vgame.esrbRating === "E" ? 'selected' : '' %>>E</option>
+    <option value="E 10+" <%= vgame.esrbRating === "E 10+" ? 'selected' : '' %>>E 10+</option>
     <option value="T" <%= vgame.esrbRating === "T" ? 'selected' : '' %>>T</option>
     <option value="M" <%= vgame.esrbRating === "M" ? 'selected' : '' %>>M</option>
   </select>
   <label>System:</label>
-  <input type="text" name="system" value="<%= vgame.system %>" />
+  <select name="system">
+    <option value="PS4" <%= vgame.system === "PS4" ? 'selected' : '' %>>PS4</option>
+    <option value="PS5" <%= vgame.system === "PS5" ? 'selected' : '' %>>PS5</option>
+    <option value="Xbox One" <%= vgame.system === "Xbox One" ? 'selected' : '' %>>Xbox One</option>
+    <option value="Xbox Series X/S" <%= vgame.system === "Xbox Series X/S" ? 'selected' : '' %>>Xbox Series X/S</option>
+    <option value="Nintendo Switch" <%= vgame.system === "Nintendo Switch" ? 'selected' : '' %>>Nintendo Switch</option>
+  </select>
   <label>Price:</label>
   <input type="text" name="price" value="<%= vgame.price %>" />
-  <input id="update-video-game-button" type="submit" value="Update Video Game" />
+  <input id="button" type="submit" value="Update Video Game" />
 </form>
 
 <%- include('../partials/footer') %>

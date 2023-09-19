@@ -8,14 +8,21 @@
   <label>ESRB Rating:</label>
   <select name="esrbRating">
     <option value="E">E</option>
+    <option value="E 10+">E 10+</option>
     <option value="T">T</option>
     <option value="M">M</option>
   </select>
   <label>System:</label>
-  <input type="text" name="system" />
+  <select name="system">
+    <option value="PS4">PS4</option>
+    <option value="PS5">PS5</option>
+    <option value="Xbox One">Xbox One</option>
+    <option value="Xbox Series X/S">Xbox Series X/S</option>
+    <option value="Nintendo Switch">Nintendo Switch</option>
+  </select>
   <label>Price:</label>
   <input type="text" name="price" />
-  <input id="add-video-game-button" type="submit" value="Add Video Game" />
+  <input id="button" type="submit" value="Add Video Game" />
 </form>
 
 <%- include('../partials/footer') %>
